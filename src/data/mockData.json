@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Mary Kamau",
+      "apartment": "Block A, Room 101",
+      "rating": 4.8,
+      "avatar": "👩‍💼"
+    },
+    {
+      "id": 2,
+      "name": "John Ochieng",
+      "apartment": "Block B, Room 205",
+      "rating": 4.9,
+      "avatar": "👨‍🏫"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "ownerId": 1,
+      "name": "Cordless Drill",
+      "category": "Tools",
+      "description": "Black & Decker 20V cordless drill with charger and bits. Perfect for home projects.",
+      "image": "🔧",
+      "availability": true,
+      "dailyRate": 0,
+      "deposit": 500
+    },
+    {
+      "id": 2,
+      "ownerId": 1,
+      "name": "Pasta Maker",
+      "category": "Kitchen",
+      "description": "Manual pasta maker, great for fresh pasta. Comes with 3 cutting attachments.",
+      "image": "🍝",
+      "availability": true,
+      "dailyRate": 0,
+      "deposit": 200
+    },
+    {
+      "id": 3,
+      "ownerId": 2,
+      "name": "Camping Tent",
+      "category": "Sports",
+      "description": "4-person dome tent, waterproof, used only twice. Includes carrying bag.",
+      "image": "⛺",
+      "availability": true,
+      "dailyRate": 100,
+      "deposit": 1000
+    }
+  ],
+  "borrowRequests": [
+    {
+      "id": 1,
+      "itemId": 1,
+      "borrowerId": 2,
+      "startDate": "2024-01-15",
+      "endDate": "2024-01-17",
+      "status": "accepted",
+      "timestamp": "2024-01-10T10:30:00Z"
+    }
+  ]
+}
