@@ -1,16 +1,109 @@
-# React + Vite
+# JiraniLink
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+JiraniLink is a community-driven platform that connects neighbors to borrow and share items, fostering trust and collaboration within local communities. Built with React, this application allows users to browse available items, make borrow requests, and build a network of trusted neighbors.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Item Catalog**: Browse a comprehensive list of items available for borrowing from neighbors
+- **Search & Filter**: Find items by name, description, or category
+- **Borrow Requests**: Submit borrow requests with dates and manage approvals
+- **User Profiles**: View neighbor profiles with ratings and reviews
+- **Responsive Design**: Optimized for desktop and mobile devices
+- **Pagination**: Efficient browsing through large item catalogs
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React 19
+- **Build Tool**: Vite
+- **Routing**: React Router DOM
+- **Linting**: ESLint
+- **Styling**: CSS Modules
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+```bash
+git clone <repository-url>
+cd hackathon
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Start the development server:
+
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:5173`
+
+## Usage
+
+- **Home Page**: Introduction to JiraniLink and its features
+- **Catalog**: Browse and search for available items
+- **My Items**: Manage your own items (future feature)
+- **Profile**: View and edit your profile information
+
+## Project Structure
+
+```
+hackathon/
+├── public/
+│   └── vite.svg
+├── src/
+│   ├── assets/
+│   │   └── react.svg
+│   ├── components/
+│   │   ├── BorrowRequestModal.jsx
+│   │   ├── ItemCard.jsx
+│   │   ├── Navbar.jsx
+│   │   └── SearchBar.jsx
+│   ├── data/
+│   │   └── mockData.json
+│   ├── pages/
+│   │   ├── Catalog.jsx
+│   │   ├── Home.jsx
+│   │   ├── MyItems.jsx
+│   │   └── Profile.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── index.html
+├── package.json
+├── vite.config.js
+├── eslint.config.js
+└── README.md
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## Contributors
+
+- Nelson
+- Jeff
+- Victor
+- Lewis
+- Mark
+
+## License
+
+This project is licensed under the MIT License.
