@@ -24,7 +24,6 @@ const MyItems = () => {
 
   const handleRequestAction = (requestId, action) => {
     // In a real app, this would update the backend with userId
-    console.log(`User ${userId}: Request ${requestId} ${action}`);
     toast.success(`Request ${action} successfully!`);
   };
 

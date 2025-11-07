@@ -13,32 +13,6 @@ body {
   line-height: 1.6;
 }
 
-  width: 100vw;
->>>>>>> Stashed changes
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-  overflow-y: auto;
-<<<<<<< Updated upstream
-=======
-  width: 100%;
->>>>>>> Stashed changes
-}
-
-.page-content {
-  height: 100%;
-<<<<<<< Updated upstream
-=======
-  width: 100%;
->>>>>>> Stashed changes
-  display: flex;
-  flex-direction: column;
-  background-color: #f5f5f5;
-}
-=======
 /* Layout */
 .app {
   height: 100vh;
@@ -56,32 +30,6 @@ main {
 .page-content {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  background-color: #f5f5f5;
-}
-=======
-  width: 100vw;
->>>>>>> Stashed changes
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-  overflow-y: auto;
-<<<<<<< Updated upstream
-=======
-  width: 100%;
->>>>>>> Stashed changes
-}
-
-.page-content {
-  height: 100%;
-<<<<<<< Updated upstream
-=======
-  width: 100%;
->>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   background-color: #f5f5f5;
@@ -267,12 +215,9 @@ main {
 .btn {
   padding: 0.75rem 1rem;
   border-radius: 6px;
-<<<<<<< Updated upstream
-  cursor: pointer;}
-=======
   cursor: pointer;
 }
->>>>>>> Stashed changes
+
 .btn-primary {
   background-color: #05b5fa; /* ✅ Blue */
   padding: 12px 24px; /* ✅ Normal button size */
@@ -288,7 +233,6 @@ main {
 .btn-primary:hover {
   background-color: #cc001b; /* ✅ Red on hover */
 }
-
 
 .btn-secondary {
   background-color: #f8f9fa;
@@ -598,12 +542,8 @@ main {
 }
 
 .home-page {
-<<<<<<< Updated upstream
-  width: 100%;
-=======
   width: 100vw;
   min-height: 100vh;
->>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -612,11 +552,7 @@ main {
 /* HERO SECTION */
 .hero {
   width: 100%;
-<<<<<<< Updated upstream
-  height: 70vh; /* Adjust height as needed */
-=======
   height: 70vh; /* Reduced height to not cover the bigger part of the page */
->>>>>>> Stashed changes
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -656,26 +592,6 @@ main {
   background: #0077ff; /* or your preferred primary color */
 }
 
-<<<<<<< Updated upstream
-
-/* Features section */
-.features {
-  display: flex;
-  justify-content: space-around;
-  width: 90%;
-  margin: 40px auto;
-  gap: 20px;
-}
-
-.feature {
-  background: #f7f7f7;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  flex: 1;
-}
-
-=======
 /* Features section */
 .features-section {
   padding: 4rem 2rem;
@@ -722,7 +638,6 @@ main {
   color: #444;
   line-height: 1.5;
 }
->>>>>>> Stashed changes
 
 /* Responsive Design */
 @media (max-width: 768px) {

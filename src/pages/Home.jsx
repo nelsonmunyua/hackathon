@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -9,11 +10,9 @@ const Home = () => {
           Connect with your neighbors to borrow and share items. Build a
           stronger community together!
         </p>
-        <button className="btn-primary">
-          <a href="/catalog">
-            Browse Items
-          </a>
-        </button>
+        <Link to="/catalog" className="btn-primary">
+          Browse Items
+        </Link>
       </div>
       <div className="features-section">
         <h2 className="section-title">Features</h2>
