@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { toast } from "react-toastify";
@@ -52,7 +51,6 @@ const Catalog = () => {
       borrowerName: requestData.borrowerName,
       timestamp: new Date().toISOString(),
     };
-    console.log("Borrow request submitted:", requestWithUser);
     toast.success(
       "Borrow request sent successfully! The owner will respond soon."
     );
