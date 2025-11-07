@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { toast } from "react-toastify";
+import useItems from "../hooks/useItems";
+import useBorrowRequests from "../hooks/useBorrowRequests";
 import mockData from "../data/mockData.json";
 
 const MyItems = () => {
   const { userId, isLoaded } = useAuth();
+  const { items, updateItemAvailability } = useItems();
+  const { borrowRequests, updateRequestStatus } = useBorrowRequests();
   const [myItems, setMyItems] = useState([]);
-  const [borrowRequests, setBorrowRequests] = useState([]);
 
   useEffect(() => {
     if (!userId) return;
 
     // Get user's items - filter by Clerk userId
-    const userItems = mockData.items.filter((item) => item.ownerId === userId);
+    const userItems = items.filter((item) => item.ownerId === userId);
     setMyItems(userItems);
-
-    // Get borrow requests for user's items
-    const userBorrowRequests = mockData.borrowRequests.filter((request) =>
-      userItems.some((item) => item.id === request.itemId)
-    );
-    setBorrowRequests(userBorrowRequests);
-  }, [userId]);
+  }, [userId, items]);
 
   const handleRequestAction = (requestId, action) => {
-    // In a real app, this would update the backend with userId
+    updateRequestStatus(requestId, action);
+    if (action === "accepted") {
+      const request = borrowRequests.find((req) => req.id === requestId);
+      if (request) {
+        updateItemAvailability(request.itemId, false);
+      }
+    }
     toast.success(`Request ${action} successfully!`);
   };
 
@@ -74,16 +77,19 @@ const MyItems = () => {
         ) : (
           <div className="requests-list">
             {borrowRequests.map((request) => {
-              const item = mockData.items.find((i) => i.id === request.itemId);
-              const borrower = mockData.users.find(
-                (u) => u.id === request.borrowerId
-              );
+              const item = items.find((i) => i.id === request.itemId);
+              const storedUsers = localStorage.getItem("users");
+              const users = storedUsers
+                ? JSON.parse(storedUsers)
+                : mockData.users;
+              const borrower = users.find((u) => u.id === request.borrowerId);
               return (
                 <div key={request.id} className="request-card">
                   <div className="request-info">
-                    <h4>{item.name}</h4>
+                    <h4>{item?.name || "Unknown Item"}</h4>
                     <p>
-                      Requested by: {borrower.name} ({borrower.apartment})
+                      Requested by: {borrower?.name || "Unknown"} (
+                      {borrower?.apartment || ""})
                     </p>
                     <p>
                       Dates: {request.startDate} to {request.endDate}

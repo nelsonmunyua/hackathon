@@ -4,11 +4,14 @@ import { toast } from "react-toastify";
 import ItemCard from "../components/ItemCard";
 import SearchBar from "../components/SearchBar";
 import BorrowRequestModal from "../components/BorrowRequestModal";
+import useItems from "../hooks/useItems";
+import useBorrowRequests from "../hooks/useBorrowRequests";
 import mockData from "../data/mockData.json";
 
 const Catalog = () => {
-  const { userId, isLoaded } = useAuth();
-  const [items, setItems] = useState([]);
+  const { isLoaded, userId } = useAuth();
+  const { availableItems } = useItems();
+  const { borrowRequests, addBorrowRequest } = useBorrowRequests();
   const [filteredItems, setFilteredItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,11 +20,11 @@ const Catalog = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
 
+  const items = availableItems;
+
   useEffect(() => {
-    // Simulate loading data
-    setItems(mockData.items);
-    setFilteredItems(mockData.items);
-  }, []);
+    setFilteredItems(items);
+  }, [items]);
 
   useEffect(() => {
     let filtered = items.filter(
@@ -44,13 +47,7 @@ const Catalog = () => {
   };
 
   const handleBorrowSubmit = (requestData) => {
-    // In a real app, this would send to backend with userId
-    const requestWithUser = {
-      ...requestData,
-      borrowerId: userId, // Assign the Clerk user ID
-      borrowerName: requestData.borrowerName,
-      timestamp: new Date().toISOString(),
-    };
+    addBorrowRequest(requestData);
     toast.success(
       "Borrow request sent successfully! The owner will respond soon."
     );
@@ -58,7 +55,9 @@ const Catalog = () => {
   };
 
   const getOwner = (ownerId) => {
-    return mockData.users.find((user) => user.id === ownerId);
+    const storedUsers = localStorage.getItem("users");
+    const users = storedUsers ? JSON.parse(storedUsers) : mockData.users;
+    return users.find((user) => user.id === ownerId);
   };
 
   // Pagination logic
@@ -92,6 +91,8 @@ const Catalog = () => {
             item={item}
             owner={getOwner(item.ownerId)}
             onBorrow={handleBorrowClick}
+            borrowRequests={borrowRequests}
+            userId={userId}
           />
         ))}
       </div>
