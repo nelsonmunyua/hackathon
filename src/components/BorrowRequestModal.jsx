@@ -20,6 +20,8 @@ const BorrowRequestModal = ({ item, owner, onClose, onSubmit }) => {
       startDate,
       endDate,
     });
+    setStartDate("");
+    setEndDate("");
   };
 
   return (

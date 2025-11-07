@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 
-const ItemCard = ({ item, owner, onBorrow }) => {
+const ItemCard = ({ item, owner, onBorrow, borrowRequests, userId }) => {
   const [showDetails, setShowDetails] = useState(false);
+
+  const hasPendingRequest = borrowRequests.some(
+    (req) =>
+      req.itemId === item.id &&
+      req.borrowerId === userId &&
+      req.status === "pending"
+  );
 
   return (
     <div className="item-card">
@@ -23,9 +30,15 @@ const ItemCard = ({ item, owner, onBorrow }) => {
         >
           {showDetails ? "Less" : "More"} Details
         </button>
-        <button className="btn-primary" onClick={() => onBorrow(item)}>
-          Borrow
-        </button>
+        {hasPendingRequest ? (
+          <button className="btn-secondary" disabled>
+            Already Borrowed
+          </button>
+        ) : (
+          <button className="btn-primary" onClick={() => onBorrow(item)}>
+            Borrow
+          </button>
+        )}
       </div>
 
       {showDetails && (
