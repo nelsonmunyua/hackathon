@@ -1,11 +1,26 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import MyItems from "./pages/MyItems";
 import Profile from "./pages/Profile";
+import SignInPage from "./pages/SignIn";
+import SignUpPage from "./pages/SignUp";
+
+// Protected Route Component
+const ProtectedRoute = ({ children }) => {
+  return (
+    <>
+      <SignedIn>{children}</SignedIn>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
+    </>
+  );
+};
 
 function App() {
   return (
@@ -14,10 +29,36 @@ function App() {
         <Navbar />
         <main>
           <Routes>
+            {/* Public Routes */}
             <Route path="/" element={<Home />} />
-            <Route path="/catalog" element={<Catalog />} />
-            <Route path="/my-items" element={<MyItems />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/sign-in/*" element={<SignInPage />} />
+            <Route path="/sign-up/*" element={<SignUpPage />} />
+
+            {/* Protected Routes */}
+            <Route
+              path="/catalog"
+              element={
+                <ProtectedRoute>
+                  <Catalog />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/my-items"
+              element={
+                <ProtectedRoute>
+                  <MyItems />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <ProtectedRoute>
+                  <Profile />
+                </ProtectedRoute>
+              }
+            />
           </Routes>
         </main>
       </div>
