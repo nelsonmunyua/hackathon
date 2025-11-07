@@ -25,6 +25,9 @@ const Navbar = () => {
           <Link to="/my-items" className="nav-link">
             My Items
           </Link>
+          <Link to="/messages" className="nav-link">
+            Messages
+          </Link>
           <Link to="/profile" className="nav-link">
             Profile
           </Link>

@@ -7,6 +7,8 @@ import Home from "./pages/Home";
 import Catalog from "./pages/Catalog";
 import MyItems from "./pages/MyItems";
 import Profile from "./pages/Profile";
+import Messages from "./pages/Messages";
+import ChatWindow from "./components/ChatWindow";
 import SignInPage from "./pages/SignIn";
 import SignUpPage from "./pages/SignUp";
 
@@ -48,6 +50,22 @@ function App() {
               element={
                 <ProtectedRoute>
                   <MyItems />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/messages"
+              element={
+                <ProtectedRoute>
+                  <Messages />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/messages/:otherUserId"
+              element={
+                <ProtectedRoute>
+                  <ChatWindow />
                 </ProtectedRoute>
               }
             />

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ChatButton from "./ChatButton";
 
 const ItemCard = ({ item, owner, onBorrow }) => {
   const [showDetails, setShowDetails] = useState(false);
@@ -23,6 +24,12 @@ const ItemCard = ({ item, owner, onBorrow }) => {
         >
           {showDetails ? "Less" : "More"} Details
         </button>
+        <ChatButton
+          ownerId={item.ownerId}
+          ownerName={owner.name}
+          itemId={item.id}
+          itemName={item.name}
+        />
         <button className="btn-primary" onClick={() => onBorrow(item)}>
           Borrow
         </button>
