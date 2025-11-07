@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const BorrowRequestModal = ({ item, owner, onClose, onSubmit }) => {
   const [startDate, setStartDate] = useState("");
@@ -6,6 +7,14 @@ const BorrowRequestModal = ({ item, owner, onClose, onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!startDate || !endDate) {
+      toast.error("Please select both start and end dates.");
+      return;
+    }
+    if (new Date(startDate) >= new Date(endDate)) {
+      toast.error("End date must be after start date.");
+      return;
+    }
     onSubmit({
       itemId: item.id,
       startDate,

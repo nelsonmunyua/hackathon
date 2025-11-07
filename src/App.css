@@ -15,7 +15,21 @@ body {
 
 /* Layout */
 .app {
-  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.page-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
 }
 
 /* Navigation */
@@ -195,21 +209,26 @@ body {
   padding-top: 1rem;
 }
 
-.btn-primary {
-  background-color: #2c5aa0;
-  color: white;
-  border: none;
+.btn {
   padding: 0.75rem 1rem;
   border-radius: 6px;
-  cursor: pointer;
-  flex: 1;
-  font-weight: 500;
-  transition: background-color 0.2s;
+  cursor: pointer;}
+.btn-primary {
+  background-color: #05b5fa; /* ✅ Blue */
+  padding: 12px 24px; /* ✅ Normal button size */
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #1e3f73;
+  background-color: #cc001b; /* ✅ Red on hover */
 }
+
 
 .btn-secondary {
   background-color: #f8f9fa;
@@ -572,6 +591,75 @@ body {
   color: #28a745;
   font-weight: bold;
 }
+
+.home-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  height: 70vh; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* ✅ Background Image from Unsplash */
+  background-image: url("https://cdn.pixabay.com/photo/2021/09/24/12/38/paper-figures-6652452_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* ✅ Dark overlay for better text visibility */
+  position: relative;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45); /* Overlay darkness */
+}
+
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 2; /* Makes text appear above overlay */
+}
+
+/* CTA Button */
+.btn-primary {
+  background: #0077ff; /* or your preferred primary color */
+}
+
+
+/* Features section */
+.features {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 40px auto;
+  gap: 20px;
+}
+
+.feature {
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

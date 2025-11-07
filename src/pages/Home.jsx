@@ -2,16 +2,18 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="home-page">
+    <div className="home-page page-content">
       <div className="hero">
         <h1>Welcome to JiraniLink</h1>
         <p>
           Connect with your neighbors to borrow and share items. Build a
           stronger community together!
         </p>
-        <a href="/catalog" className="btn-primary">
-          Browse Items
-        </a>
+        <button className="btn-primary">
+          <a href="/catalog">
+            Browse Items
+          </a>
+        </button>
       </div>
       <div className="features">
         <div className="feature">

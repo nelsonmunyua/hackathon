@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../hooks/useAuth";
+import { toast } from "react-toastify";
 import mockData from "../data/mockData.json";
 
 const MyItems = () => {
@@ -24,13 +25,13 @@ const MyItems = () => {
   const handleRequestAction = (requestId, action) => {
     // In a real app, this would update the backend with userId
     console.log(`User ${userId}: Request ${requestId} ${action}`);
-    alert(`Request ${action} successfully!`);
+    toast.success(`Request ${action} successfully!`);
   };
 
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <div className="my-items-page">
+    <div className="my-items-page page-content">
       <div className="page-header">
         <h1>My Items</h1>
         <p>Manage your shared items and borrow requests</p>

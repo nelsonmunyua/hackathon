@@ -24,7 +24,7 @@ const Profile = () => {
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <div className="profile-page">
+    <div className="profile-page page-content">
       <div className="page-header">
         <h1>My Profile</h1>
         <p>Manage your account and view your activity</p>

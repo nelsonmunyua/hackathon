@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from "react";
 import { useAuth } from "../hooks/useAuth";
+import { toast } from "react-toastify";
 import ItemCard from "../components/ItemCard";
 import SearchBar from "../components/SearchBar";
 import BorrowRequestModal from "../components/BorrowRequestModal";
@@ -51,7 +53,9 @@ const Catalog = () => {
       timestamp: new Date().toISOString(),
     };
     console.log("Borrow request submitted:", requestWithUser);
-    alert("Borrow request sent successfully! The owner will respond soon.");
+    toast.success(
+      "Borrow request sent successfully! The owner will respond soon."
+    );
     setShowModal(false);
   };
 
@@ -72,7 +76,7 @@ const Catalog = () => {
   if (!isLoaded) return <div>Loading...</div>;
 
   return (
-    <div className="catalog-page">
+    <div className="catalog-page page-content">
       <div className="page-header">
         <h1>Community Items</h1>
         <p>Borrow what you need from your trusted neighbors</p>
