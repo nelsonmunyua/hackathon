@@ -13,6 +13,62 @@
       "apartment": "Block B, Room 205",
       "rating": 4.9,
       "avatar": "👨‍🏫"
+    },
+    {
+      "id": 3,
+      "name": "Alice Wanjiku",
+      "apartment": "Block C, Room 302",
+      "rating": 4.7,
+      "avatar": "👩‍🎓"
+    },
+    {
+      "id": 4,
+      "name": "David Kiprop",
+      "apartment": "Block A, Room 204",
+      "rating": 4.6,
+      "avatar": "👨‍💻"
+    },
+    {
+      "id": 5,
+      "name": "Grace Nyambura",
+      "apartment": "Block B, Room 108",
+      "rating": 4.9,
+      "avatar": "👩‍⚕️"
+    },
+    {
+      "id": 6,
+      "name": "Michael Otieno",
+      "apartment": "Block C, Room 415",
+      "rating": 4.5,
+      "avatar": "👨‍🔧"
+    },
+    {
+      "id": 7,
+      "name": "Sarah Achieng",
+      "apartment": "Block A, Room 307",
+      "rating": 4.8,
+      "avatar": "👩‍🍳"
+    },
+    {
+      "id": 8,
+      "name": "Peter Kipkemboi",
+      "apartment": "Block B, Room 512",
+      "rating": 4.7,
+      "avatar": "👨‍🌾"
+    },
+    {
+      "id": 9,
+      "name": "Lucy Wairimu",
+      "apartment": "Block C, Room 201",
+      "rating": 4.9,
+      "avatar": "👩‍🎨"
+    },
+    {
+      "id": 10,
+      "name": "James Njoroge",
+      "apartment": "Block A, Room 410",
+      "rating": 4.6,
+      "avatar": "👨‍🏭"
     }
   ],
   "items": [
@@ -48,6 +104,556 @@
       "availability": true,
       "dailyRate": 100,
       "deposit": 1000
+    },
+    {
+      "id": 4,
+      "ownerId": 3,
+      "name": "Laptop Charger",
+      "category": "Electronics",
+      "description": "Universal laptop charger, compatible with most brands. 65W output.",
+      "image": "🔌",
+      "availability": true,
+      "dailyRate": 50,
+      "deposit": 300
+    },
+    {
+      "id": 5,
+      "ownerId": 4,
+      "name": "Fiction Novel",
+      "category": "Books",
+      "description": "Bestselling mystery novel, hardcover, in excellent condition.",
+      "image": "📖",
+      "availability": true,
+      "dailyRate": 20,
+      "deposit": 100
+    },
+    {
+      "id": 6,
+      "ownerId": 5,
+      "name": "Office Chair",
+      "category": "Furniture",
+      "description": "Ergonomic office chair with adjustable height and lumbar support.",
+      "image": "🪑",
+      "availability": true,
+      "dailyRate": 150,
+      "deposit": 800
+    },
+    {
+      "id": 7,
+      "ownerId": 6,
+      "name": "Blender",
+      "category": "Kitchen",
+      "description": "High-speed blender, perfect for smoothies and soups. 1000W motor.",
+      "image": "🥤",
+      "availability": true,
+      "dailyRate": 40,
+      "deposit": 250
+    },
+    {
+      "id": 8,
+      "ownerId": 7,
+      "name": "Yoga Mat",
+      "category": "Sports",
+      "description": "Non-slip yoga mat, 6mm thick, eco-friendly material.",
+      "image": "🧘",
+      "availability": true,
+      "dailyRate": 30,
+      "deposit": 150
+    },
+    {
+      "id": 9,
+      "ownerId": 8,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "description": "Noise-cancelling wireless headphones, great for music and calls.",
+      "image": "🎧",
+      "availability": true,
+      "dailyRate": 80,
+      "deposit": 400
+    },
+    {
+      "id": 10,
+      "ownerId": 9,
+      "name": "Cookbook",
+      "category": "Books",
+      "description": "Italian cuisine cookbook with recipes and photos.",
+      "image": "📚",
+      "availability": true,
+      "dailyRate": 25,
+      "deposit": 120
+    },
+    {
+      "id": 11,
+      "ownerId": 10,
+      "name": "Hammer",
+      "category": "Tools",
+      "description": "16oz claw hammer, forged steel head, comfortable grip.",
+      "image": "🔨",
+      "availability": true,
+      "dailyRate": 10,
+      "deposit": 50
+    },
+    {
+      "id": 12,
+      "ownerId": 1,
+      "name": "Coffee Maker",
+      "category": "Kitchen",
+      "description": "Drip coffee maker, 12-cup capacity, programmable timer.",
+      "image": "☕",
+      "availability": true,
+      "dailyRate": 35,
+      "deposit": 200
+    },
+    {
+      "id": 13,
+      "ownerId": 2,
+      "name": "Basketball",
+      "category": "Sports",
+      "description": "Official size basketball, indoor/outdoor use, durable rubber.",
+      "image": "🏀",
+      "availability": true,
+      "dailyRate": 60,
+      "deposit": 300
+    },
+    {
+      "id": 14,
+      "ownerId": 3,
+      "name": "Tablet",
+      "category": "Electronics",
+      "description": "10-inch tablet with stylus, perfect for drawing and note-taking.",
+      "image": "📱",
+      "availability": true,
+      "dailyRate": 100,
+      "deposit": 500
+    },
+    {
+      "id": 15,
+      "ownerId": 4,
+      "name": "Biography Book",
+      "category": "Books",
+      "description": "Inspiring biography of a famous inventor, paperback.",
+      "image": "📖",
+      "availability": true,
+      "dailyRate": 15,
+      "deposit": 80
+    },
+    {
+      "id": 16,
+      "ownerId": 5,
+      "name": "Dining Table",
+      "category": "Furniture",
+      "description": "Wooden dining table for 6, extendable, in good condition.",
+      "image": "🍽️",
+      "availability": true,
+      "dailyRate": 200,
+      "deposit": 1000
+    },
+    {
+      "id": 17,
+      "ownerId": 6,
+      "name": "Wrench Set",
+      "category": "Tools",
+      "description": "Metric wrench set, 10 pieces, chrome vanadium steel.",
+      "image": "🔧",
+      "availability": true,
+      "dailyRate": 20,
+      "deposit": 100
+    },
+    {
+      "id": 18,
+      "ownerId": 7,
+      "name": "Microwave Oven",
+      "category": "Kitchen",
+      "description": "Countertop microwave, 1000W, with turntable and timer.",
+      "image": "🔥",
+      "availability": true,
+      "dailyRate": 50,
+      "deposit": 300
+    },
+    {
+      "id": 19,
+      "ownerId": 8,
+      "name": "Tennis Racket",
+      "category": "Sports",
+      "description": "Graphite tennis racket, lightweight and powerful.",
+      "image": "🎾",
+      "availability": true,
+      "dailyRate": 70,
+      "deposit": 350
+    },
+    {
+      "id": 20,
+      "ownerId": 9,
+      "name": "Smartphone Stand",
+      "category": "Electronics",
+      "description": "Adjustable smartphone stand for desk or car use.",
+      "image": "📱",
+      "availability": true,
+      "dailyRate": 10,
+      "deposit": 50
+    },
+    {
+      "id": 21,
+      "ownerId": 10,
+      "name": "Science Fiction Novel",
+      "category": "Books",
+      "description": "Award-winning sci-fi novel, hardcover edition.",
+      "image": "📚",
+      "availability": true,
+      "dailyRate": 25,
+      "deposit": 120
+    },
+    {
+      "id": 22,
+      "ownerId": 1,
+      "name": "Screwdriver Set",
+      "category": "Tools",
+      "description": "Precision screwdriver set, 20 pieces, magnetic tips.",
+      "image": "🔧",
+      "availability": true,
+      "dailyRate": 15,
+      "deposit": 75
+    },
+    {
+      "id": 23,
+      "ownerId": 2,
+      "name": "Toaster",
+      "category": "Kitchen",
+      "description": "4-slice toaster with adjustable browning settings.",
+      "image": "🍞",
+      "availability": true,
+      "dailyRate": 25,
+      "deposit": 150
+    },
+    {
+      "id": 24,
+      "ownerId": 3,
+      "name": "Soccer Ball",
+      "category": "Sports",
+      "description": "Official size soccer ball, FIFA approved, durable.",
+      "image": "⚽",
+      "availability": true,
+      "dailyRate": 40,
+      "deposit": 200
+    },
+    {
+      "id": 25,
+      "ownerId": 4,
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "description": "Portable Bluetooth speaker, waterproof, 12-hour battery.",
+      "image": "🔊",
+      "availability": true,
+      "dailyRate": 60,
+      "deposit": 300
+    },
+    {
+      "id": 26,
+      "ownerId": 5,
+      "name": "History Book",
+      "category": "Books",
+      "description": "Comprehensive history textbook, used for study.",
+      "image": "📖",
+      "availability": true,
+      "dailyRate": 20,
+      "deposit": 100
+    },
+    {
+      "id": 27,
+      "ownerId": 6,
+      "name": "Bookshelf",
+      "category": "Furniture",
+      "description": "5-shelf wooden bookshelf, sturdy and spacious.",
+      "image": "📚",
+      "availability": true,
+      "dailyRate": 120,
+      "deposit": 600
+    },
+    {
+      "id": 28,
+      "ownerId": 7,
+      "name": "Measuring Tape",
+      "category": "Tools",
+      "description": "25ft measuring tape, lockable, easy to read.",
+      "image": "📏",
+      "availability": true,
+      "dailyRate": 5,
+      "deposit": 25
+    },
+    {
+      "id": 29,
+      "ownerId": 8,
+      "name": "Air Fryer",
+      "category": "Kitchen",
+      "description": "2.5qt air fryer, oil-free cooking, digital controls.",
+      "image": "🍟",
+      "availability": true,
+      "dailyRate": 45,
+      "deposit": 250
+    },
+    {
+      "id": 30,
+      "ownerId": 9,
+      "name": "Golf Clubs Set",
+      "category": "Sports",
+      "description": "Beginner golf clubs set, includes driver, irons, and bag.",
+      "image": "⛳",
+      "availability": true,
+      "dailyRate": 150,
+      "deposit": 750
+    },
+    {
+      "id": 31,
+      "ownerId": 10,
+      "name": "USB Cable",
+      "category": "Electronics",
+      "description": "6ft USB charging cable, fast charging compatible.",
+      "image": "🔌",
+      "availability": true,
+      "dailyRate": 5,
+      "deposit": 20
+    },
+    {
+      "id": 32,
+      "ownerId": 1,
+      "name": "Romance Novel",
+      "category": "Books",
+      "description": "Bestselling romance novel, paperback, light reading.",
+      "image": "💕",
+      "availability": true,
+      "dailyRate": 15,
+      "deposit": 75
+    },
+    {
+      "id": 33,
+      "ownerId": 2,
+      "name": "Lawn Mower",
+      "category": "Tools",
+      "description": "Electric lawn mower, 20-inch cut, self-propelled.",
+      "image": "🌱",
+      "availability": true,
+      "dailyRate": 80,
+      "deposit": 400
+    },
+    {
+      "id": 34,
+      "ownerId": 3,
+      "name": "Slow Cooker",
+      "category": "Kitchen",
+      "description": "6qt slow cooker, programmable, perfect for meals.",
+      "image": "🍲",
+      "availability": true,
+      "dailyRate": 40,
+      "deposit": 200
+    },
+    {
+      "id": 35,
+      "ownerId": 4,
+      "name": "Badminton Racket",
+      "category": "Sports",
+      "description": "Lightweight badminton racket, carbon fiber frame.",
+      "image": "🏸",
+      "availability": true,
+      "dailyRate": 50,
+      "deposit": 250
+    },
+    {
+      "id": 36,
+      "ownerId": 5,
+      "name": "Power Bank",
+      "category": "Electronics",
+      "description": "10000mAh power bank, fast charging, dual USB.",
+      "image": "🔋",
+      "availability": true,
+      "dailyRate": 30,
+      "deposit": 150
+    },
+    {
+      "id": 37,
+      "ownerId": 6,
+      "name": "Poetry Book",
+      "category": "Books",
+      "description": "Collection of modern poetry, inspiring and thought-provoking.",
+      "image": "📝",
+      "availability": true,
+      "dailyRate": 10,
+      "deposit": 50
+    },
+    {
+      "id": 38,
+      "ownerId": 7,
+      "name": "Armchair",
+      "category": "Furniture",
+      "description": "Comfortable armchair, fabric upholstery, reclining feature.",
+      "image": "🛋️",
+      "availability": true,
+      "dailyRate": 100,
+      "deposit": 500
+    },
+    {
+      "id": 39,
+      "ownerId": 8,
+      "name": "Level Tool",
+      "category": "Tools",
+      "description": "Magnetic level tool, 24-inch, accurate measurements.",
+      "image": "📐",
+      "availability": true,
+      "dailyRate": 10,
+      "deposit": 50
+    },
+    {
+      "id": 40,
+      "ownerId": 9,
+      "name": "Waffle Maker",
+      "category": "Kitchen",
+      "description": "Non-stick waffle maker, makes 4 waffles at once.",
+      "image": "🧇",
+      "availability": true,
+      "dailyRate": 35,
+      "deposit": 180
+    },
+    {
+      "id": 41,
+      "ownerId": 10,
+      "name": "Volleyball",
+      "category": "Sports",
+      "description": "Composite volleyball, indoor/outdoor, official size.",
+      "image": "🏐",
+      "availability": true,
+      "dailyRate": 45,
+      "deposit": 225
+    },
+    {
+      "id": 42,
+      "ownerId": 1,
+      "name": "Mouse Pad",
+      "category": "Electronics",
+      "description": "Large mouse pad, anti-slip base, smooth surface.",
+      "image": "🖱️",
+      "availability": true,
+      "dailyRate": 5,
+      "deposit": 25
+    },
+    {
+      "id": 43,
+      "ownerId": 2,
+      "name": "Thriller Novel",
+      "category": "Books",
+      "description": "Gripping thriller novel, keeps you on the edge.",
+      "image": "🔪",
+      "availability": true,
+      "dailyRate": 20,
+      "deposit": 100
+    },
+    {
+      "id": 44,
+      "ownerId": 3,
+      "name": "Pliers",
+      "category": "Tools",
+      "description": "Needle-nose pliers, insulated handles, versatile use.",
+      "image": "🔧",
+      "availability": true,
+      "dailyRate": 8,
+      "deposit": 40
+    },
+    {
+      "id": 45,
+      "ownerId": 4,
+      "name": "Rice Cooker",
+      "category": "Kitchen",
+      "description": "5-cup rice cooker, automatic keep-warm function.",
+      "image": "🍚",
+      "availability": true,
+      "dailyRate": 30,
+      "deposit": 150
+    },
+    {
+      "id": 46,
+      "ownerId": 5,
+      "name": "Hiking Boots",
+      "category": "Sports",
+      "description": "Waterproof hiking boots, size 10, comfortable for long treks.",
+      "image": "🥾",
+      "availability": true,
+      "dailyRate": 70,
+      "deposit": 350
+    },
+    {
+      "id": 47,
+      "ownerId": 6,
+      "name": "Webcam",
+      "category": "Electronics",
+      "description": "HD webcam, 1080p, built-in microphone.",
+      "image": "📹",
+      "availability": true,
+      "dailyRate": 40,
+      "deposit": 200
+    },
+    {
+      "id": 48,
+      "ownerId": 7,
+      "name": "Children's Book",
+      "category": "Books",
+      "description": "Illustrated children's book, educational and fun.",
+      "image": "📚",
+      "availability": true,
+      "dailyRate": 10,
+      "deposit": 50
+    },
+    {
+      "id": 49,
+      "ownerId": 8,
+      "name": "Desk Lamp",
+      "category": "Furniture",
+      "description": "LED desk lamp, adjustable brightness, USB charging.",
+      "image": "💡",
+      "availability": true,
+      "dailyRate": 20,
+      "deposit": 100
+    },
+    {
+      "id": 50,
+      "ownerId": 9,
+      "name": "Saw",
+      "category": "Tools",
+      "description": "Hand saw, 12-inch blade, sharp and durable.",
+      "image": "🪚",
+      "availability": true,
+      "dailyRate": 12,
+      "deposit": 60
+    },
+    {
+      "id": 51,
+      "ownerId": 10,
+      "name": "Juicer",
+      "category": "Kitchen",
+      "description": "Electric juicer, centrifugal, easy to clean.",
+      "image": "🍊",
+      "availability": true,
+      "dailyRate": 25,
+      "deposit": 125
+    },
+    {
+      "id": 52,
+      "ownerId": 1,
+      "name": "Dumbbells",
+      "category": "Sports",
+      "description": "Set of 5kg dumbbells, pair, adjustable weights.",
+      "image": "🏋️",
+      "availability": true,
+      "dailyRate": 30,
+      "deposit": 150
+    },
+    {
+      "id": 53,
+      "ownerId": 2,
+      "name": "Router",
+      "category": "Electronics",
+      "description": "Wi-Fi router, dual-band, high-speed internet.",
+      "image": "📡",
+      "availability": true,
+      "dailyRate": 50,
+      "deposit": 250
     }
   ],
   "borrowRequests": [
