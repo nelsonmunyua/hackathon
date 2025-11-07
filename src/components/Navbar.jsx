@@ -1,7 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { useAuth } from "../hooks/useAuth";
 
 const Navbar = () => {
+  const { userName } = useAuth();
+
   return (
     <nav className="navbar">
       <div className="nav-brand">
@@ -13,20 +17,32 @@ const Navbar = () => {
         <Link to="/" className="nav-link">
           Home
         </Link>
-        <Link to="/catalog" className="nav-link">
-          Catalog
-        </Link>
-        <Link to="/my-items" className="nav-link">
-          My Items
-        </Link>
-        <Link to="/profile" className="nav-link">
-          Profile
-        </Link>
-        <span>Welcome, Neighbor!</span>
+
+        <SignedIn>
+          <Link to="/catalog" className="nav-link">
+            Catalog
+          </Link>
+          <Link to="/my-items" className="nav-link">
+            My Items
+          </Link>
+          <Link to="/profile" className="nav-link">
+            Profile
+          </Link>
+          <span className="welcome-text">Welcome, {userName}!</span>
+          <UserButton afterSignOutUrl="/" />
+        </SignedIn>
+
+        <SignedOut>
+          <Link to="/sign-in" className="nav-link">
+            Sign In
+          </Link>
+          <Link to="/sign-up" className="nav-link btn-signup">
+            Sign Up
+          </Link>
+        </SignedOut>
       </div>
     </nav>
   );
 };
 
 export default Navbar;
-

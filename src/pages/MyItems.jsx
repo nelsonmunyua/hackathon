@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
+import { useAuth } from "../hooks/useAuth";
 import mockData from "../data/mockData.json";
 
 const MyItems = () => {
+  const { userId, isLoaded } = useAuth();
   const [myItems, setMyItems] = useState([]);
   const [borrowRequests, setBorrowRequests] = useState([]);
 
   useEffect(() => {
-    // Simulate loading user's items (assuming user id 1 for demo)
-    const userId = 1;
+    if (!userId) return;
+
+    // Get user's items - filter by Clerk userId
     const userItems = mockData.items.filter((item) => item.ownerId === userId);
     setMyItems(userItems);
 
@@ -16,13 +19,15 @@ const MyItems = () => {
       userItems.some((item) => item.id === request.itemId)
     );
     setBorrowRequests(userBorrowRequests);
-  }, []);
+  }, [userId]);
 
   const handleRequestAction = (requestId, action) => {
-    // In a real app, this would update the backend
-    console.log(`Request ${requestId} ${action}`);
+    // In a real app, this would update the backend with userId
+    console.log(`User ${userId}: Request ${requestId} ${action}`);
     alert(`Request ${action} successfully!`);
   };
+
+  if (!isLoaded) return <div>Loading...</div>;
 
   return (
     <div className="my-items-page">

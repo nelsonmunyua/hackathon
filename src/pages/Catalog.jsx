@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useAuth } from "../hooks/useAuth";
 import ItemCard from "../components/ItemCard";
 import SearchBar from "../components/SearchBar";
 import BorrowRequestModal from "../components/BorrowRequestModal";
 import mockData from "../data/mockData.json";
 
 const Catalog = () => {
+  const { userId, isLoaded } = useAuth();
   const [items, setItems] = useState([]);
   const [filteredItems, setFilteredItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -41,8 +43,14 @@ const Catalog = () => {
   };
 
   const handleBorrowSubmit = (requestData) => {
-    // In a real app, this would send to backend
-    console.log("Borrow request submitted:", requestData);
+    // In a real app, this would send to backend with userId
+    const requestWithUser = {
+      ...requestData,
+      borrowerId: userId, // Assign the Clerk user ID
+      borrowerName: requestData.borrowerName,
+      timestamp: new Date().toISOString(),
+    };
+    console.log("Borrow request submitted:", requestWithUser);
     alert("Borrow request sent successfully! The owner will respond soon.");
     setShowModal(false);
   };
@@ -60,6 +68,8 @@ const Catalog = () => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+
+  if (!isLoaded) return <div>Loading...</div>;
 
   return (
     <div className="catalog-page">
