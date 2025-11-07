@@ -13,8 +13,65 @@
       "apartment": "Block B, Room 205",
       "rating": 4.9,
       "avatar": "👨‍🏫"
+    },
+    {
+      "id": 3,
+      "name": "Grace Mwende",
+      "apartment": "Block A, Room 304",
+      "rating": 4.7,
+      "avatar": "👩‍🎨"
+    },
+    {
+      "id": 4,
+      "name": "Kevin Otieno",
+      "apartment": "Block C, Room 112",
+      "rating": 4.5,
+      "avatar": "👨‍🔧"
+    },
+    {
+      "id": 5,
+      "name": "Aisha Abdalla",
+      "apartment": "Block D, Room 406",
+      "rating": 4.9,
+      "avatar": "👩‍💻"
+    },
+    {
+      "id": 6,
+      "name": "Peter Mwangi",
+      "apartment": "Block E, Room 202",
+      "rating": 4.6,
+      "avatar": "👨‍💼"
+    },
+    {
+      "id": 7,
+      "name": "Lucy Wairimu",
+      "apartment": "Block A, Room 108",
+      "rating": 4.8,
+      "avatar": "👩‍🍳"
+    },
+    {
+      "id": 8,
+      "name": "Brian Kiptoo",
+      "apartment": "Block F, Room 301",
+      "rating": 4.4,
+      "avatar": "👨‍💻"
+    },
+    {
+      "id": 9,
+      "name": "Naomi Njeri",
+      "apartment": "Block C, Room 210",
+      "rating": 4.7,
+      "avatar": "👩‍🔬"
+    },
+    {
+      "id": 10,
+      "name": "Samuel Kariuki",
+      "apartment": "Block D, Room 102",
+      "rating": 4.5,
+      "avatar": "👨‍🚒"
     }
   ],
+
   "items": [
     {
       "id": 1,
@@ -48,8 +105,141 @@
       "availability": true,
       "dailyRate": 100,
       "deposit": 1000
+    },
+    {
+      "id": 4,
+      "ownerId": 3,
+      "name": "Sewing Machine",
+      "category": "Home",
+      "description": "Singer electric sewing machine, great for basic tailoring and repairs.",
+      "image": "🧵",
+      "availability": true,
+      "dailyRate": 150,
+      "deposit": 800
+    },
+    {
+      "id": 5,
+      "ownerId": 4,
+      "name": "Bicycle",
+      "category": "Transport",
+      "description": "Mountain bike with 21 gears. Ideal for fitness and errands.",
+      "image": "🚲",
+      "availability": true,
+      "dailyRate": 200,
+      "deposit": 500
+    },
+    {
+      "id": 6,
+      "ownerId": 5,
+      "name": "Laptop Stand",
+      "category": "Office",
+      "description": "Adjustable aluminum laptop stand, lightweight and portable.",
+      "image": "💻",
+      "availability": true,
+      "dailyRate": 50,
+      "deposit": 150
+    },
+    {
+      "id": 7,
+      "ownerId": 3,
+      "name": "Extension Cable (10m)",
+      "category": "Tools",
+      "description": "Heavy-duty 10-meter extension cable, perfect for events or home use.",
+      "image": "🔌",
+      "availability": true,
+      "dailyRate": 30,
+      "deposit": 100
+    },
+    {
+      "id": 8,
+      "ownerId": 2,
+      "name": "Projector",
+      "category": "Electronics",
+      "description": "Mini projector for movie nights and presentations. HDMI compatible.",
+      "image": "📽️",
+      "availability": true,
+      "dailyRate": 250,
+      "deposit": 1000
+    },
+    {
+      "id": 9,
+      "ownerId": 6,
+      "name": "Electric Kettle",
+      "category": "Kitchen",
+      "description": "1.7L stainless steel electric kettle with auto shut-off.",
+      "image": "☕",
+      "availability": true,
+      "dailyRate": 30,
+      "deposit": 100
+    },
+    {
+      "id": 10,
+      "ownerId": 7,
+      "name": "Hand Mixer",
+      "category": "Kitchen",
+      "description": "5-speed hand mixer, perfect for baking projects.",
+      "image": "🧁",
+      "availability": true,
+      "dailyRate": 40,
+      "deposit": 100
+    },
+    {
+      "id": 11,
+      "ownerId": 8,
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "description": "Waterproof portable speaker with deep bass and 12-hour battery.",
+      "image": "🔊",
+      "availability": true,
+      "dailyRate": 80,
+      "deposit": 300
+    },
+    {
+      "id": 12,
+      "ownerId": 9,
+      "name": "Garden Hose",
+      "category": "Outdoor",
+      "description": "Expandable garden hose with spray nozzle, 15 meters long.",
+      "image": "🌿",
+      "availability": true,
+      "dailyRate": 60,
+      "deposit": 200
+    },
+    {
+      "id": 13,
+      "ownerId": 10,
+      "name": "First Aid Kit",
+      "category": "Safety",
+      "description": "Comprehensive first aid kit for home or travel use.",
+      "image": "🩹",
+      "availability": true,
+      "dailyRate": 0,
+      "deposit": 50
+    },
+    {
+      "id": 14,
+      "ownerId": 6,
+      "name": "Car Vacuum Cleaner",
+      "category": "Auto",
+      "description": "12V portable car vacuum cleaner, lightweight and easy to use.",
+      "image": "🚗",
+      "availability": true,
+      "dailyRate": 70,
+      "deposit": 200
+    },
+    {
+      "id": 15,
+      "ownerId": 9,
+      "name": "Folding Table",
+      "category": "Home",
+      "description": "Lightweight foldable table suitable for events or study.",
+      "image": "🪑",
+      "availability": true,
+      "dailyRate": 90,
+      "deposit": 300
     }
   ],
+
   "borrowRequests": [
     {
       "id": 1,
@@ -59,6 +249,87 @@
       "endDate": "2024-01-17",
       "status": "accepted",
       "timestamp": "2024-01-10T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "itemId": 4,
+      "borrowerId": 1,
+      "startDate": "2024-02-03",
+      "endDate": "2024-02-04",
+      "status": "pending",
+      "timestamp": "2024-02-01T14:00:00Z"
+    },
+    {
+      "id": 3,
+      "itemId": 5,
+      "borrowerId": 3,
+      "startDate": "2024-02-10",
+      "endDate": "2024-02-12",
+      "status": "declined",
+      "timestamp": "2024-02-09T08:45:00Z"
+    },
+    {
+      "id": 4,
+      "itemId": 8,
+      "borrowerId": 4,
+      "startDate": "2024-03-01",
+      "endDate": "2024-03-03",
+      "status": "accepted",
+      "timestamp": "2024-02-28T09:10:00Z"
+    },
+    {
+      "id": 5,
+      "itemId": 7,
+      "borrowerId": 5,
+      "startDate": "2024-03-05",
+      "endDate": "2024-03-06",
+      "status": "pending",
+      "timestamp": "2024-03-04T15:00:00Z"
+    },
+    {
+      "id": 6,
+      "itemId": 9,
+      "borrowerId": 3,
+      "startDate": "2024-04-02",
+      "endDate": "2024-04-04",
+      "status": "accepted",
+      "timestamp": "2024-04-01T09:30:00Z"
+    },
+    {
+      "id": 7,
+      "itemId": 10,
+      "borrowerId": 2,
+      "startDate": "2024-04-05",
+      "endDate": "2024-04-06",
+      "status": "declined",
+      "timestamp": "2024-04-03T11:00:00Z"
+    },
+    {
+      "id": 8,
+      "itemId": 11,
+      "borrowerId": 9,
+      "startDate": "2024-05-01",
+      "endDate": "2024-05-02",
+      "status": "accepted",
+      "timestamp": "2024-04-30T16:00:00Z"
+    },
+    {
+      "id": 9,
+      "itemId": 12,
+      "borrowerId": 1,
+      "startDate": "2024-05-10",
+      "endDate": "2024-05-11",
+      "status": "pending",
+      "timestamp": "2024-05-09T08:15:00Z"
+    },
+    {
+      "id": 10,
+      "itemId": 15,
+      "borrowerId": 7,
+      "startDate": "2024-06-02",
+      "endDate": "2024-06-04",
+      "status": "accepted",
+      "timestamp": "2024-06-01T14:45:00Z"
     }
   ]
 }
